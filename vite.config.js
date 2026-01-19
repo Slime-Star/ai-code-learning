@@ -1,24 +1,17 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import path from 'path'
+import { resolve } from 'path'
 
 export default defineConfig({
+  // GitHub Pages 基础路径
+  base: '/ai-code-learning/',
+  // 插件配置
   plugins: [vue()],
+  // 路径别名配置
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-    }
-  },
-  server: {
-    port: 3000,
-    open: true,
-    // 代理AI接口（替换为你的后端/AI接口地址）
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8080', // AI服务后端地址
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
+      '@': resolve(__dirname, 'src')
     }
   }
 })
