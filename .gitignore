@@ -1,24 +1,27 @@
-# Logs
-logs
+# Dependencies and generated files
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/__pycache__/
+**/.venv/
+*.py[cod]
+# Local credentials and personal/runtime data
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+*.db
+*.db-*
+**/uploads/
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+.runtime-logs/
+.runtime-tools/
+.tools/
+*.zip
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.idea/
+.vscode/
+
+/docs/frontend-history.bundle

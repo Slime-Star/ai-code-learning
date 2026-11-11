@@ -1,0 +1,14 @@
+
+# Local API credentials
+.env
+.env.*
+!.env.example
+
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+*.db
+*.db-*
+uploads/
+*.log
